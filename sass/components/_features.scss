@@ -1,0 +1,201 @@
+.main {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    @media only screen and (max-width: 360px) {
+        & {
+            margin-top: 1rem;
+        }
+    }
+
+    &__social--icons {
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin: 2rem;
+
+        filter: invert(100%);
+    }
+
+    @media (max-width: 1023px) {
+        &__social--icons {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        &__content {
+          flex-direction: column !important;
+          align-items: unset !important;  
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        &__content {
+            flex-direction: column !important;
+        }
+    }
+
+   &__content {
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+
+        &--card {
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            // flex-wrap: wrap;
+            margin: 2rem 1rem;
+            // width: 100%;
+            // max-width: 1rem;
+
+            &--box {            
+                max-width: 25rem;
+                margin: 10px 0;
+
+                animation: expand .5s ease-in-out;
+
+                @media (max-width: 1023px) {
+                    &--box {
+                        margin: 0;
+                        max-width: 15rem;
+                    }
+                }
+
+                &--block {
+                    width: 21rem;
+                    height: 10rem;
+                    background-color: $color-tertiary-dark;
+                }
+
+                &--text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    h3 {
+                        margin: 1px;
+                        color: $color-secondary-light;
+                    }
+
+                    h4 {
+                        margin: 2px;
+                        color: $color-white;
+                    }
+
+                    span {
+                        color: $color-tertiary-light;
+                    }
+
+                    @media (max-width: 1023px) {
+                        &--text {
+                            h4 {
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 420px) {
+            &__content {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 1023px) {
+            &--card {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                // width: 100%;
+                // max-width: 1rem;
+            }
+        }
+
+        &--pagination {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            color: $color-white;
+            max-width: 72rem;
+            margin-left: 2rem;
+
+            &--button {
+                cursor: pointer;
+            }
+
+            &--index {
+                display: flex;
+                align-items: center;
+                margin: 0 5px;
+                font-size: 15px;
+                
+                cursor: pointer;
+
+                &, &:focus {
+                    border: none;
+                    outline: none;
+
+                    background: transparent;
+                    color: $color-white;
+
+                    .active, &:focus {
+                        color: $color-secondary-light;
+                        font-size: 20px;
+                    }
+
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        &--mobile--view {
+            display: none;   
+        }
+
+        @media (max-width: 1023px) {
+            &--pagination {
+                display: none;
+            }
+
+            .desktop__view--button {
+                display: none;
+            }
+
+            &--mobile--view {
+                display: flex;
+                flex-direction: column;
+
+                margin: 10px 0;
+
+                &--button {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+
+                    color: $color-secondary-light;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+
+                & span {
+                    color: $color-primary-light;
+                    text-align: center;
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.card__content--btn {
+  &, &:focus, &:active {
+    display: inline-block;
+    position: relative;
+    border: none;
+    outline: none;
+
+    margin: 5px 0;
+    width: 8rem;
+    height: 2rem;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: $color-white;
+    background-color: $color-secondary-light;
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    &:hover {
+      margin-top: 4px;
+      transition: all .2s;
+    }
+
+    &:active {
+      margin-top: 5px;
+      transition: all .2s;
+    }
+  }
+}

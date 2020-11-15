@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 62.5%;
+}
+
+@media (max-width: 1023px) {
+    html {
+        overflow-x: hidden;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 100vh;
+    background-color: $color-primary-dark;
+}
+
