@@ -10,11 +10,18 @@
     
     @media only screen and (max-width: 420px) {
        & {
+           justify-content: center;
            width: 80%;
            margin-bottom: 5rem;
-           height: 8rem;
        }
     }
+
+    @media only screen and (max-width: 640px) {
+        & {
+            justify-content: center;
+            height: 9rem;
+        }
+     }
 
     &__radio {
         box-sizing: border-box;
