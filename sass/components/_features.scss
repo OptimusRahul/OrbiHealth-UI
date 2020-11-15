@@ -3,6 +3,8 @@
     justify-content: center;
     max-width: 100%;
 
+    margin-top: 1rem;
+
     @media only screen and (max-width: 360px) {
         & {
             margin-top: 1rem;
@@ -123,13 +125,25 @@
             }
         }
 
+        @media (min-width: 1728px) {
+            &--card {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: unset !important;
+
+                // width: 100%;
+                // max-width: 1rem;
+            }
+        }
+
         &--pagination {
             display: flex;
             justify-content: space-between;
             width: 100%;
 
             color: $color-white;
-            max-width: 72rem;
+            max-width: 91%;
             margin-left: 2rem;
 
             &--button {
