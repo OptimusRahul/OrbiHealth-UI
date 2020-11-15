@@ -34,7 +34,8 @@ body {
   @media only screen and (max-width: 420px) {
     .filter {
       width: 80%;
-      margin-bottom: 5rem; } }
+      margin-bottom: 5rem;
+      height: 8rem; } }
   .filter__radio {
     box-sizing: border-box;
     padding: 0;
